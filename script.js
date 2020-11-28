@@ -96,3 +96,17 @@ newQuestion = () => {
     unusedQuestions.splice(questionIndex, 1);
     acceptAnswers = true;
 };
+
+answers.forEach((answer) => {
+    answer.addEventListener("click", (e) => {
+        if(!acceptAnswers) return;
+
+        acceptAnswers = false;
+        const choiceSelected = e.target;
+        const answerSelected = choiceSelected.dataset["number"];
+        console.log(answerSelected);
+        newQuestion();
+    });
+});
+
+startGame();
