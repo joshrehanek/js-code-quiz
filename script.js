@@ -74,3 +74,25 @@ startGame = () => {
     console.log(unusedQuestions);
     newQuestion();
 };
+// New question function
+newQuestion = () => {
+
+    if (unusedQuestions.length === 0) {
+        return window.location.assign("./end-game.html");
+    }
+    
+    questionCounter++;
+    const questionIndex = Math.floor(Math.random() * unusedQuestions.length);
+    console.log(questionIndex);
+    currentQuestion = unusedQuestions[questionIndex];
+    question.innerText = currentQuestion.question; 
+
+    answers.forEach((answer) => {
+        const number = answer.dataset['number'];
+        answer.innerText = currentQuestion["answer" + number];
+        console.log(number);
+    });
+
+    unusedQuestions.splice(questionIndex, 1);
+    acceptAnswers = true;
+};
