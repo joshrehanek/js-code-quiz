@@ -13,43 +13,43 @@ const wrongPoints = -15;
 // Questions & Answers Object
 let questions = [
     {
-        question: "Who invented JS?",
-        answer1: "Me",
-        answer2: "Kels",
-        answer3: "Einstein",
-        answer4: "Mika",
+        question: "WHat is the HTML tag used to write Javascript?",
+        answer1: "<js>",
+        answer2: "<script>",
+        answer3: "<java>",
+        answer4: "<javascript>",
         answer: 2
     },
     {
-        question: "How many leters in the alphabet?",
-        answer1: "1",
-        answer2: "2",
-        answer3: "3",
-        answer4: "4",
+        question: "Which of the following is the correct syntax to display 'Yip Yip' in an alert box using JavaScript?",
+        answer1: "msg(“Yip Yip”);",
+        answer2: "alertbox(“Yip Yip”);",
+        answer3: "alert(“Yip Yip”);",
+        answer4: "prompt(“Yip Yip”);",
         answer: 3
     }, 
     {
-        question: "why do fools fall in love?",
-        answer1: "1",
-        answer2: "2",
-        answer3: "3",
-        answer4: "4",
+        question: "What is the correct syntax for referring to an external script called 'avatar.js'?",
+        answer1: "<script name=”avatar.js”>",
+        answer2: "<script href=”avatar.js”>",
+        answer3: "<script ref=”avatar.js”>",
+        answer4: "<script src=”avatar.js”>",
         answer: 4
     },
     {
-        question: "did godzilla exist?",
-        answer1: "1",
-        answer2: "2",
-        answer3: "3",
-        answer4: "4",
+        question: "Choose the correct JavaScript syntax to change the content of the following HTML code.",
+        answer1: "document.getElement(“avatar”).innerHTML=”I am the last airbender”;",
+        answer2: " document.getElementById(“avatar”).innerHTML=”I am a the last airbender”;",
+        answer3: "document.getId(“avatar”)=”I am a the last airbender”;",
+        answer4: "document.getElementById(“avatar”).innerHTML=I am a the last airbender;",
         answer: 2
     },
     {
-        question: "could he beat up harry potter?",
-        answer1: "1",
-        answer2: "2",
-        answer3: "3",
-        answer4: "4",
+        question: "Which built-in method combines the text of two strings and returns a new string?",
+        answer1: "concat()",
+        answer2: "append()",
+        answer3: "attach()",
+        answer4: "toLowerCase",
         answer: 1
     },
 ];
