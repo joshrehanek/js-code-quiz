@@ -37,7 +37,8 @@ let questions = [
         answer: 4
     },
     {
-        question: "Choose the correct JavaScript syntax to change the content of the following HTML code.",
+        question: "Choose the correct JavaScript syntax to change the content of some HTML code with where the id ='avatar'",
+
         answer1: "document.getElement(“avatar”).innerHTML=”I am the last airbender”;",
         answer2: " document.getElementById(“avatar”).innerHTML=”I am a the last airbender”;",
         answer3: "document.getId(“avatar”)=”I am a the last airbender”;",
@@ -56,16 +57,15 @@ let questions = [
 
 // start game function using fat arrow syntax
 startGame = () => {
-    let secondsLeft = 75;
-    questionCounter = 0;
+    let secondsLeft = 5;
+    
 
         var timerInterval = setInterval(function() {
           secondsLeft--;
           timeEl.textContent = secondsLeft + " seconds left";
       
           if(secondsLeft === 0) {
-            clearInterval(timerInterval);
-            
+            return window.location.assign("./end-game.html");    
           }
       
         }, 1000);
@@ -81,7 +81,7 @@ newQuestion = () => {
         return window.location.assign("./end-game.html");
     }
     
-    questionCounter++;
+
     const questionIndex = Math.floor(Math.random() * unusedQuestions.length);
     console.log(questionIndex);
     currentQuestion = unusedQuestions[questionIndex];
