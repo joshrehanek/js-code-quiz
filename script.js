@@ -53,3 +53,24 @@ let questions = [
         answer: 1
     },
 ];
+
+// start game function using fat arrow syntax
+startGame = () => {
+    let secondsLeft = 75;
+    questionCounter = 0;
+
+        var timerInterval = setInterval(function() {
+          secondsLeft--;
+          timeEl.textContent = secondsLeft + " seconds left";
+      
+          if(secondsLeft === 0) {
+            clearInterval(timerInterval);
+            
+          }
+      
+        }, 1000);
+// uses spread operator to get a full copy questions from the array
+    unusedQuestions = [...questions];
+    console.log(unusedQuestions);
+    newQuestion();
+};
