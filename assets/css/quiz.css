@@ -3,29 +3,31 @@ h5 {
     text-align: center;
 }
 
-.answer-container {
+.button-choice {
+    padding: 1.5rem;
+    width: 100%;
+    margin: 2.0rem;
+}
+
+button.button-choice {
     display: flex;
+    justify-content: column;
     margin-bottom: 0.5rem;
     width: 100%;
     font-size: 2.0rem;
+    font-family: fantasy;
     border: 0.1rem solid plum;
     background-color: whitesmoke;
 }
 
-.answer-container:hover {
+button.button-choice:hover {
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 #333;
     transform: translateY(-0.1);
     transition: transform 150ms;
 }
-
-.answer-letter {
-    padding: 1.5rem 2.5rem;
-    background-color:#333;
-    color: whitesmoke;
-}
-
-.answer-text {
-    padding: 1.5rem;
-    width: 100%;
+#right-wrong {
+    font-size: 4.0rem;
+    text-align: center;
+    color: plum;
 }
