@@ -44,7 +44,7 @@ let questions = [
 ];
 // start game function using fat arrow syntax
 const startGame = () => {
-
+// countdown timer 
     var timerInterval = setInterval(function () {
         secondsLeft--;
         timeEl.textContent = `You have ${secondsLeft} seconds left`;
@@ -54,25 +54,24 @@ const startGame = () => {
         }
 
     }, 1000);
-
-    // console.log(unusedQuestions);
+// triggers newQuestion function
     newQuestion();
 };
 // New question function
 const newQuestion = () => {
-
+// clears innerHTML elements for each new question
     answerZoneEl.innerHTML = '';
     rightWrongEl.innerHTML = '';
 
     let currentQuestion = questions[questionIndex];
-
+// sends user to end game screen when all questions have been answered
     if (questionIndex === questions.length) {
         localStorage.setItem('mostRecentScore', secondsLeft);
         return window.location.assign("./end-game.html");
     }
-
+// changes text content of questionTitle to currentQuestion
     questionTitle.textContent = currentQuestion.question;
-
+// forEach loop that goes through each answer and sends to validateAnswer fucntion
     currentQuestion.choices.forEach((answer) => {
         let tempBtn = document.createElement("button");
         tempBtn.textContent = answer;
@@ -82,17 +81,14 @@ const newQuestion = () => {
         answerZoneEl.appendChild(tempBtn);
     });
 };
-
+// function to validate answers
 function validateAnswer() {
-    console.log(`value: ${this.value}`)
-    console.log(`answer: ${questions[questionIndex].answer}`)
     if (this.value !== questions[questionIndex].answer) {
-        secondsLeft -= 15;
+        secondsLeft -= 10;
         rightWrongEl.textContent = "WRONG";
     } else {
         rightWrongEl.textContent = "RIGHT";
     }
-
     questionIndex++;
     setTimeout(function () {
         newQuestion();
