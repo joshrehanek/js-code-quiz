@@ -5,18 +5,14 @@ const finalScoreEl = document.getElementById('finalScore');
 const mostRecentScoreEl = localStorage.getItem('mostRecentScore');
 finalScoreEl.innerText = `Score: ${mostRecentScoreEl} points`;
 const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-console.log(highScores);
 
 // listener event
 usernameEl.addEventListener('keyup', () =>{
     saveScoreBtnEl.disabled = !usernameEl.value;
-    
-    console.log(usernameEl.value)
 });
 
 // function to save high score when event is triggered
 saveHighScore = e => {
-    console.log('clicked')
     e.preventDefault();
 
 // score Object
@@ -32,8 +28,6 @@ saveHighScore = e => {
     highScores.splice(10);
 // updates highscores in local storage
     localStorage.setItem('highScores',JSON.stringify(highScores));
-
+// send user to highscores page after save button is clicked
     return window.location.assign("./highscores.html");
-    
-    console.log(score);
 };
