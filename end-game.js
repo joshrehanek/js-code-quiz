@@ -10,6 +10,7 @@ console.log(highScores);
 // listener event
 usernameEl.addEventListener('keyup', () =>{
     saveScoreBtnEl.disabled = !usernameEl.value;
+    
     console.log(usernameEl.value)
 });
 
@@ -31,6 +32,8 @@ saveHighScore = e => {
     highScores.splice(10);
 // updates highscores in local storage
     localStorage.setItem('highScores',JSON.stringify(highScores));
+
+    return window.location.assign("./highscores.html");
     
     console.log(score);
 };
