@@ -67,6 +67,7 @@ const newQuestion = () => {
     let currentQuestion = questions[questionIndex];
 
     if (questionIndex === questions.length) {
+        localStorage.setItem('mostRecentScore', secondsLeft);
         return window.location.assign("./end-game.html");
     }
 
