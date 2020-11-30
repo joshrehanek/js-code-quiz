@@ -8,6 +8,7 @@ console.log(highScoresEl)
 // returns list of high scores in the HTML's innertext
 highScoresListEl.innerHTML =
     highScoresEl.map(score => {
+        // uses 'template literal' to return ouput strings with values
         return `<li class='high-score'>${score.name}-${score.score}</li>`;
     }) 
     // joins list info
