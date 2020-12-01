@@ -6,10 +6,7 @@ const rightWrongEl = document.querySelector("#right-wrong");
 
 // Initial variables
 let currentQuestion = {};
-let acceptAnswers = false;
 let unusedQuestions = [];
-const correctPoints = 10;
-const wrongPoints = -15;
 let questionIndex = 0;
 let secondsLeft = 75;
 
