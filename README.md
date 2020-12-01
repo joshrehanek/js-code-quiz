@@ -3,6 +3,7 @@
 
 ## Table of contents
 - [General Info](#general-info)
+- [Link to deployed page](#general-info)
 - [Home Page](#home-page)
 - [Question 1](#question-1)
 - [Question 2](#question-2)
@@ -28,8 +29,9 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and score
 
+## Link to deployed page
 
-
+- https://joshrehanek.github.io/js-code-quiz/
 
 ## Home Page
 
