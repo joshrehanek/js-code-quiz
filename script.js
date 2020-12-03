@@ -86,17 +86,25 @@ const newQuestion = () => {
 };
 // function to validate answers
 function validateAnswer() {
+    //if the value of answer does not match the answer listed in the questions objects...
     if (this.value !== questions[questionIndex].answer) {
+        //subtract 10 seconds from secondsLeft
         secondsLeft -= 10;
+        //display "WRONG" in right-wrong div
         rightWrongEl.textContent = "WRONG";
+        //if the value does match...
     } else {
+        //displat "RIGHT" in the right-wrong div
         rightWrongEl.textContent = "RIGHT";
     }
+    //add 1 to questionIndex
     questionIndex++;
+    //setTimeout for 1 second after each question is answered
     setTimeout(function () {
+        //restart newQuestion function
         newQuestion();
     }, 1000)
 
 }
-
+//Call startGame function
 startGame();
