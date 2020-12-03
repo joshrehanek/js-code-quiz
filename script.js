@@ -70,11 +70,17 @@ const newQuestion = () => {
     questionTitle.textContent = currentQuestion.question;
 // forEach loop that goes through each answer and sends to validateAnswer fucntion
     currentQuestion.choices.forEach((answer) => {
+        //creates a variable element called tempBtn that is a button
         let tempBtn = document.createElement("button");
+        //makes the text content of button an answer from my object array
         tempBtn.textContent = answer;
+        //sets tempBtn value to answer
         tempBtn.setAttribute('value', answer);
+        //sets tempBtn class to 'button-choice'
         tempBtn.setAttribute('class', 'button-choice');
+        //when tempBtn is clicked validateAnswer function is triggered
         tempBtn.onclick = validateAnswer;
+        //appends each answer in the form of 'tempBtn' to my answer-zone
         answerZoneEl.appendChild(tempBtn);
     });
 };
