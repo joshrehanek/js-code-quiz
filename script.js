@@ -6,7 +6,6 @@ const rightWrongEl = document.querySelector("#right-wrong");
 
 // Initial variables
 let currentQuestion = {};
-let unusedQuestions = [];
 let questionIndex = 0;
 let secondsLeft = 75;
 
